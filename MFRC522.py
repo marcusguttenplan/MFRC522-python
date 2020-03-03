@@ -127,6 +127,7 @@ class MFRC522:
 
   serNum = []
 
+  # Change port for Raspi ['/dev/spidev0.0', '/dev/spidev0.1']
   def __init__(self, dev='/dev/spidev0.1', spd=1000000):
     self.dev_dictionary = spi.openSPI(device=dev,speed=spd)
     GPIO.setmode(GPIO.BOARD)
